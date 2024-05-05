@@ -10,7 +10,7 @@ Open a [PlatformIO Core CLI](https://docs.platformio.org/en/latest/integration/i
 pio run -t menuconfig
 ```
 
-to enter the menuconfig. Select your target WiFi and camera board type in the "Application settings".
+to enter the menuconfig. Select your target WiFi and camera board type in the "Application configuration".
 
 (move around with J/K keys if needed.)
 
@@ -19,3 +19,5 @@ to enter the menuconfig. Select your target WiFi and camera board type in the "A
 The default ist `CONFIG_BOARD_ESP32CAM_AITHINKER` (esp32cam). Double check the pins in `camera_pins.h` if needed.
 
 After the example is uploaded, it should connect to the configured WiFi and open a HTTP server at `http://<ip of your esp32>/`.
+
+Your board should have PSRAM to interact with a camera. Hence, `CONFIG_SPIRAM=y` is on.
