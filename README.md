@@ -21,3 +21,5 @@ The default ist `CONFIG_BOARD_ESP32CAM_AITHINKER` (esp32cam). Double check the p
 After the example is uploaded, it should connect to the configured WiFi and open a HTTP server at `http://<ip of your esp32>/`.
 
 Your board should have PSRAM to interact with a camera. Hence, `CONFIG_SPIRAM=y` is on.
+
+Component config  --->ESP PSRAM  --->SPI RAM config  --->Enable workaround for bug in SPI RAM cache for Rev1 ESP32s  must be cancel, or it will cuase error.
